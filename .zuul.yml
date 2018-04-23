@@ -1,12 +1,12 @@
 ui: mocha-bdd
-concurrency: 2
+concurrency: 1
 tunnel:
   type: ngrok
 browsers:
   - name: chrome
     version: latest
   - name: firefox
-    version: 57
+    version: 58
   - name: safari
     version: latest
   - name: MicrosoftEdge

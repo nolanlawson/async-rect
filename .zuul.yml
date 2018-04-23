@@ -6,7 +6,7 @@ browsers:
   - name: chrome
     version: latest
   - name: firefox
-    version: latest
+    version: 56
   - name: safari
     version: latest
   - name: microsoftedge

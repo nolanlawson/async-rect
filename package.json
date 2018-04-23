@@ -1,0 +1,55 @@
+{
+  "name": "async-rect",
+  "version": "1.0.0",
+  "description": "Async version of getBoundingClientRect, built on IntersectionObserver",
+  "main": "dist/async-rect.cjs.js",
+  "module": "dist/async-rect.es.js",
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "rollup-cjs": "rollup --input index.js --format cjs --file dist/async-rect.cjs.js",
+    "rollup-es": "rollup --input index.js --format es --file dist/async-rect.es.js",
+    "rollup-iife": "rollup --input index.js --name asyncGetBoundingClientRect --format iife --file dist/async-rect.js",
+    "rollup": "run-p rollup-cjs rollup-es rollup-iife",
+    "minify": "squash dist/async-rect.js > dist/async-rect.min.js",
+    "prepublish": "npm run build",
+    "build": "run-s clean rollup minify",
+    "test": "run-s lint build zuul",
+    "zuul": "zuul --no-coverage test.js",
+    "lint": "standard",
+    "dev": "zuul --no-coverage --local 9000 test.js"
+  },
+  "keywords": [
+    "async",
+    "asynchronous",
+    "bounding",
+    "client",
+    "rect",
+    "getBoundingClientRect",
+    "Intersection",
+    "Observer",
+    "IntersectionObserver"
+  ],
+  "author": "Nolan Lawson <nolan@nolanlawson.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "butternut": "^0.4.6",
+    "es6-promise": "^4.2.4",
+    "intersection-observer": "^0.5.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.58.2",
+    "standard": "^11.0.1",
+    "zuul": "^3.11.1",
+    "zuul-ngrok": "github:nolanlawson/zuul-ngrok#patch-1"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
+  "files": [
+    "dist"
+  ]
+}

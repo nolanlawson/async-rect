@@ -9,7 +9,7 @@ browsers:
     version: 57
   - name: safari
     version: latest
-  - name: microsoftedge
+  - name: MicrosoftEdge
     version: latest
   - name: ie
     version: latest

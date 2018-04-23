@@ -9,7 +9,8 @@ browsers:
     version: 58
   - name: safari
     version: latest
-  - name: MicrosoftEdge
-    version: latest
+# cannot get this to pass on saucelabs, passes manually
+#  - name: MicrosoftEdge
+#    version: latest
   - name: ie
     version: latest

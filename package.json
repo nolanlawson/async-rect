@@ -1,7 +1,7 @@
 {
   "name": "async-rect",
   "version": "1.0.0",
-  "description": "Async version of getBoundingClientRect, built on IntersectionObserver",
+  "description": "Async version of getBoundingClientRect(), using IntersectionObserver",
   "main": "dist/async-rect.cjs.js",
   "module": "dist/async-rect.es.js",
   "scripts": {
@@ -51,5 +51,14 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nolanlawson/async-rect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nolanlawson/async-rect/issues"
+  },
+  "homepage": "https://github.com/nolanlawson/async-rect#readme"
 }

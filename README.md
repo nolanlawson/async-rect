@@ -3,7 +3,7 @@ async-rect [![Build Status](https://travis-ci.org/nolanlawson/async-rect.svg?bra
 
 Asynchronous version of [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect), built on top of [IntersectionObserver](https://www.w3.org/TR/intersection-observer/).
 
-It works the same as `gBCR`, except you don't have to worry about [layout thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing) or forcing layouts/reflows, because this function asynchronously waits for the next browser layout pass, instead of synchronously forcing layout.
+It works the same as `getBoundingClientRect()`, except you don't need to worry about [layout thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing) or forcing layouts/reflows, because this function asynchronously waits for the next browser layout pass instead of synchronously forcing layout.
 
 This library also works around some [browser](https://bugs.chromium.org/p/chromium/issues/detail?id=737228) [bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/14141398/).
 
@@ -45,6 +45,13 @@ This library requires both IntersectionObserver and Promises. If you need to sup
 - [es6-promise polyfill](https://github.com/stefanpenner/es6-promise)
 
 This library is written in ES5, so it will work in older browsers assuming you have the polyfills.
+
+Limitations
+----
+
+This library creates a new `IntersectionObserver` object and then `disconnect()`s it when it's done. As an optimization, you may want to re-use the same `IntersectionObserver` object and manage its lifecycle yourself. You may also want to do this if you are interested in using a root rectangle other than the viewport, or if you want to know the `rootBounds` as well.
+
+In those cases, the library is quite small, so feel free to fork as you see fit! 😊
 
 Building
 ---

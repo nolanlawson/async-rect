@@ -49,7 +49,7 @@ This library is written in ES5, so it will work in older browsers assuming you h
 Limitations
 ----
 
-This library creates a new `IntersectionObserver` object and then `disconnect()`s it when it's done. As an optimization, you may want to re-use the same `IntersectionObserver` object and manage its lifecycle yourself. You may also want to do this if you are interested in using a root rectangle other than the viewport, or if you want to know the `rootBounds` as well.
+This library creates a new `IntersectionObserver` object and then `disconnect()`s it when it's done. As an optimization, you may want to re-use the same `IntersectionObserver` object and manage its lifecycle yourself. You may also want to do this if you are interested in using a root rectangle other than the viewport, or if you want to know the `rootBounds` as well. (Note though that re-using the same `IntersectionObserver` object will not work if you want to invoke the function twice on the same element.)
 
 In those cases, the library is quite small, so feel free to fork as you see fit! 😊
 

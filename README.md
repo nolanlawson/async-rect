@@ -10,11 +10,7 @@ This library also works around some [browser](https://bugs.chromium.org/p/chromi
 Usage
 ----
 
-Install:
-
     npm install async-rect
-
-Use:
 
 ```js
 import asyncGetBoundingClientRect from 'async-rect'
@@ -39,7 +35,7 @@ Or use as a script tag:
 Requirements
 ----
 
-This library requires both IntersectionObserver and Promises. If you need to support browsers without these features, please use the polyfills:
+This library requires both IntersectionObserver and Promises. If you need to support browsers without those features, please use the polyfills:
 
 - [IntersectionObserver polyfill](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)
 - [es6-promise polyfill](https://github.com/stefanpenner/es6-promise)

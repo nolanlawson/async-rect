@@ -1,7 +1,7 @@
-async-rect
+async-rect [![Build Status](https://travis-ci.org/nolanlawson/async-rect.svg?branch=master)](https://travis-ci.org/nolanlawson/async-rect)
 ====
 
-Asynchronous version of [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect), built on top of [IntersectionObserver](https://www.w3.org/TR/intersection-observer/)
+Asynchronous version of [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect), built on top of [IntersectionObserver](https://www.w3.org/TR/intersection-observer/).
 
 It works the same as `gBCR`, except you don't have to worry about [layout thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing) or forcing layouts/reflows, because this function asynchronously waits for the next browser layout pass, instead of synchronously forcing layout.
 

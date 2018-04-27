@@ -1,6 +1,6 @@
 {
   "name": "async-rect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DEPRECATED - do not use",
   "main": "dist/async-rect.cjs.js",
   "module": "dist/async-rect.es.js",

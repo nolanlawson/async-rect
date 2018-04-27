@@ -1,7 +1,7 @@
 DEPRECATION NOTICE
 =====
 
-This library was built on faulty assumptions. You are better off calling `getBoundingClientRect()` inside of `requestAnimationFrame()`, which has essentially the same overhead while also avoiding frame delays and the cost of creating an IntersectionObserver, as [this benchmark](https://bl.ocks.org/nolanlawson/daa6100518e00f9354e04a6a6b09926e) demonstrates.
+This library was built on faulty assumptions. You are better off calling `getBoundingClientRect()` inside of `requestAnimationFrame()`, which has essentially the same effect while avoiding the cost of creating an IntersectionObserver, as [this benchmark](https://bl.ocks.org/nolanlawson/daa6100518e00f9354e04a6a6b09926e) demonstrates.
 
 Original documentation follows.
 
